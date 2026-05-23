@@ -1,6 +1,7 @@
 import Notas from "./components/Notas";
 import Button from "./components/Button";
 import "./App.css";
+import Boton from "./components/Boton";
 function App() {
   return (
     <>
@@ -10,8 +11,8 @@ function App() {
         onClick={() => console.log("Button!")}
       />
       <Notas />
-      <button className="bg-blue-500 text-white">TEST</button>
-      <h1 className="text-4xl font-bold text-blue-500">Tailwind funciona</h1>
+
+      <Boton text="Boton Simple" />
       <Button
         color="secondary"
         text="Click Me"
