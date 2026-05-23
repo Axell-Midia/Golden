@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f3f4f6;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111827;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.Notas {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+/* CARD */
+
+.Nota {
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.06),
+    0 2px 4px rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.Nota:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.12),
+    0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.Nota h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.Nota p {
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* BOTONES */
+
+.acciones {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.editar {
+  background: #2563eb;
+  color: white;
+}
+
+.editar:hover {
+  background: #1d4ed8;
+}
+
+.eliminar {
+  background: #ef4444;
+  color: white;
+}
+
+.eliminar:hover {
+  background: #dc2626;
+}
+
+/* FORMULARIO */
+
+.form {
+  width: 100%;
+  max-width: 700px;
+
+  margin: 40px auto;
+  padding: 24px;
+
+  background: white;
+  border-radius: 18px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.06),
+    0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.form input {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+
+  font-size: 1rem;
+
+  outline: none;
+
+  transition: border 0.2s ease;
+}
+
+.form input:focus {
+  border-color: #2563eb;
+}
+
+.form button:hover {
+  background: #1f2937;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .Notas {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .form {
+    margin: 20px 16px;
+  }
+
+  .acciones {
+    flex-direction: column;
+  }
+
+  .acciones button {
+    width: 100%;
+  }
+}
