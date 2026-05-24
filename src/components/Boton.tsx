@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 type ButtonProps = {
-  text: React.ReactNode;
+  children: React.ReactNode;
 };
 
-const Button = ({ text }: ButtonProps) => {
+const Button = ({ children }: ButtonProps) => {
   const [click, setClick] = useState(false as boolean);
 
   const handleClick = () => {
@@ -16,7 +16,7 @@ const Button = ({ text }: ButtonProps) => {
       onClick={handleClick}
       className={click ? "bg-green-500" : "bg-blue-500"}
     >
-      {text}
+      {children}
     </button>
   );
 };

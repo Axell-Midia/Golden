@@ -13,7 +13,7 @@ function App() {
       />
       <Notas />
 
-      <Boton text="Hola"></Boton>
+      <Boton>Hola</Boton>
       <Button
         color="secondary"
         text="Click Me"
