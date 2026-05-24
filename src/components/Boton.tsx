@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 type ButtonProps = {
-  text: string;
+  text: React.ReactNode;
 };
 
 const Button = ({ text }: ButtonProps) => {
-  const [click, setClick] = useState(false);
+  const [click, setClick] = useState(false as boolean);
 
   const handleClick = () => {
     setClick(!click);

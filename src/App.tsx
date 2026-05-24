@@ -2,6 +2,7 @@ import Notas from "./components/Notas";
 import Button from "./components/Button";
 import "./App.css";
 import Boton from "./components/Boton";
+
 function App() {
   return (
     <>
@@ -12,7 +13,7 @@ function App() {
       />
       <Notas />
 
-      <Boton text="Boton Simple" />
+      <Boton text="Hola"></Boton>
       <Button
         color="secondary"
         text="Click Me"
